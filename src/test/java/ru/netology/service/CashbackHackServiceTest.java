@@ -34,9 +34,7 @@ public class CashbackHackServiceTest {
 
     @org.junit.Test
     public void testRemainBoundaryValuesSix() {
-        org.junit.Assert.assertThrows(RuntimeException.class, () -> {
-            service.remain(1001);
-        });
+        org.junit.Assert.assertEquals(999, service.remain(1001));
     }
 
     @org.junit.Test
