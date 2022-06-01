@@ -32,9 +32,7 @@ public class CashbackHackServiceTest {
 
     @org.testng.annotations.Test
     public void testRemainBoundaryValuesSix() {
-        org.testng.Assert.assertThrows(RuntimeException.class, () -> {
-            service.remain(1001);
-        });
+        org.testng.Assert.assertEquals(service.remain(1001), 999);
     }
 
     @org.testng.annotations.Test
